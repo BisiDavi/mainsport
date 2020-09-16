@@ -29,3 +29,8 @@ Route::get('/enroll', 'EnrollController@index');
 
 Route::post('/enroll', 'EnrollController@subscribe');
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
