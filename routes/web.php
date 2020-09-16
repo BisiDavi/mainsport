@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/about', 'AboutController@index');
+
+Route::get('/about', 'AboutController@index');
+
+Route::get('/gallery', 'GalleryController@index');
+
+Route::get('/contact', 'ContactController@index');
+
+Route::post('/contact', 'ContactController@contactform');
+
+Route::get('/enroll', 'EnrollController@index');
+
+Route::post('/enroll', 'EnrollController@subscribe');
+

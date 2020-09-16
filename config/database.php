@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Str;
 
+$url = getenv("CLEARDB_DATABASE_URL");
+$host = "us-cdbr-east-02.cleardb.com";
+$username = "b1ad1552d8fb31";
+$password = "1fe3454f";
+$database = "heroku_b85c393686d2167";
+
 return [
 
     /*
@@ -45,12 +51,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => $url,
+            'host' => $host,
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
